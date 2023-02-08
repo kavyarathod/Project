@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> EVENT </title>
+</head>
+    <script>
+    	function cali()
+    	{
+    		var result=document.getElementById('first').value;
+    		var show =eval(result);
+    		document.getElementById('first').value=show;
+
+    	}
+    	
+    	
+	</script>
+<body>
+	<input type="TEXT" name="" id="first" readonly><br><br>
+	<input type="BUTTON" name="" value="9" id="n9" onclick="document.getElementById('first').value+='9'">
+	<input type="BUTTON" name="" value="8" onclick="document.getElementById('first').value+='8'">
+	<input type="BUTTON" name="" value="7" onclick="document.getElementById('first').value+='7'">
+	<input type="BUTTON" name="" value="+" onclick="document.getElementById('first').value+='+'"><br><br>
+	<input type="BUTTON" name="" value="4" onclick="document.getElementById('first').value+='4'">
+	<input type="BUTTON" name="" value="5" onclick="document.getElementById('first').value+='5'">
+	<input type="BUTTON" name="" value="6" onclick="document.getElementById('first').value+='6'">
+	<input type="BUTTON" name="" value="-" onclick="document.getElementById('first').value+='-'"><br><br>
+	<input type="BUTTON" name="" value="1" onclick="document.getElementById('first').value+='1'">
+	<input type="BUTTON" name="" value="2" onclick="document.getElementById('first').value+='2'">
+	<input type="BUTTON" name="" value="3" onclick="document.getElementById('first').value+='3'">
+	<input type="BUTTON" name="" value="*" onclick="document.getElementById('first').value+='*'"><br><br>
+	<input type="BUTTON" name="" value="=" onclick="cali()" >
+	<input type="BUTTON" name="" value="0" onclick="document.getElementById('first').value+='0'">
+	<input type="BUTTON" name="" value="/" onclick="document.getElementById('first').value+='/'">
+	<input type="BUTTON" name="" value="C" onclick="document.getElementById('first').value='' "><br><br>
+</body>
+</html>

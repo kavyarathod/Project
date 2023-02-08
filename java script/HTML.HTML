@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		span
+		{
+			color: red;
+		}
+	</style>
+</head>
+<script type="text/javascript">
+	
+		function validation()
+		{
+			var NAME=document.getElementById('uname').value;
+			var FATHER=document.getElementById('f_name').value;
+			var EMAIL=document.getElementById('email').value;
+			var DATE=document.getElementById('date').value;
+			var TIME= document.getElementById('time').value;
+			var GENDER=document.getElementByName('gender').value;
+			var COUNT_LENGTH=document.getElementByName('gender').length;
+			var PASSWORD=document.getElementById('pass').value;
+			var GENDER_RESULT=false;
+			var result = true;
+			var unchecked=0;
+			if (NAME=="") 
+			{
+				document.getElementById('error_mess').innerText="PLZ FILL NAME...?"
+				result=false;
+			}
+			if (FATHER=="") 
+			{
+				document.getElementById('f_error').innerText="PLZ FILL FATHER...?"
+				result=false;
+			}if (EMAIL=="") 
+			{
+				document.getElementById('email_error').innerText="PLZ FILL EMAIL..?"
+				result=false;
+			}
+			if (DATE=="") 
+			{
+				document.getElementById('date_error').innerText="PLZ FILL DATE..?"
+				result=false;
+			}
+			if (TIME=="") 
+			{
+				document.getElementById('time_error').innerText="PLZ FILL TIME..?"
+				result=false;
+			}
+			if (PASSWORD=="") 
+			{
+				document.getElementById('pass_error').innerText="PLZZ FILL PASSWORD..?"
+				result=false;
+			}
+			return result;
+			
+			
+		}
+
+
+		function show_button()
+		{
+			document.getElementById('show_butt').style.display="none";
+			document.getElementById('hide_butt').style.display="block";
+			document.getElementById('pass').type="text";
+		}
+		function hide_button()
+		{
+			document.getElementById('hide_butt').style.display="none";
+		    document.getElementById('show_butt').style.display="block";
+		    document.getElementById('pass').type="password";
+		}
+
+</script>
+
+
+
+
+
+
+
+<body>   
+   <form action="C:\Users\hp\Desktop\full stack\java script\sirclaci.html" onsubmit="return validation()">
+	<b>NAME <span>*</span>:-</b><input type="text" name="" id="uname">
+	<span id="error_mess"></span><br><br>
+	<b> FATHER <span>*</span>:-</b><input type="text" name="" id="f_name"><span id="f_error"></span><br><br>
+	<b>EMAIL<span>*</span>:-</b><input type="email" name="" id="email"><span id="email_error"></span><br><br>
+	<b>DOB <span>*</span>:-</b><input type="date" name="" id="date"><span id="date_error"></span><br><br>
+	<b>TOB<span>*</span>:-</b><input type="time" name="" id="time"><span id="time_error"></span><br><br>
+	
+
+
+
+
+
+
+
+
+   <b>PASSWORD<span>*</span>:-</b><input type="password" name="" id="pass"><span id="pass_error"></span>
+	<span style="position: absolute;left: 300px;"to>
+		<input type="button" name="" value="HIDE" style="display: none;" id="hide_butt" onclick="hide_button()">
+		<input type="button" name="" value="SHOW" id="show_butt" onclick="show_button()">
+	</span><br><br>
+	<button>SUBMIT</button>
+</form>
+       
+</body>
+</html>

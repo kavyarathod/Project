@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+</head>
+<body>
+	PASSWORD:-<input type="password" name="" id="pass">
+	<span id="pass_error"></span>
+	<script>
+		$(document).ready(function()
+		{
+			$("#pass").keyup(function()
+			{
+				var pass=$("#pass").val();
+				var length=pass.length
+				if (length<=0) 
+				{
+					$("#pass_error").text('plz fill password')
+				}
+				else if (length<=4) 
+				{
+					$("#pass_error").text("WEEK")
+				}
+				else if (length<=6) 
+				{
+					$("#pass_error").text('GOOD')
+				}
+				else
+				{
+					$("#pass_error").text('STRONG')
+				}
+			})
+		})
+	</script>
+
+
+</body>
+</html>

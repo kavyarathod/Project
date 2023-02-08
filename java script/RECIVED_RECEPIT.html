@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>RECEPIT</title>
+	<script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+	<style>
+		#BOX
+		{
+			height: 500px;
+			width: 500px;
+			background:lightblue;
+			text-align: center;
+			margin-top: 50px;
+			margin-left: 300px;
+		}
+		#RECEPIT
+		{
+			height: 20px;
+			width: 490px;
+			background: white;
+			border: 2px solid lightblue;
+		}
+		#date
+		{
+			text-align: left;
+			margin-top: 10px;
+
+		}
+		#name
+		{
+			margin-right: 100px;
+			width: 220px;
+		}
+		#cobi
+		{
+			height: 20px;
+			width: 200px;
+			font-size: 12px;
+			border: 2px solid black;
+			margin-top: 30px;
+			margin-left:30px;
+		}
+		#cf
+		{
+			height: 20px;
+			width: 200px;
+			font-size: 12px;
+			border: 2px solid black;
+			margin-top: -25px;
+			margin-left: 240px;
+		}
+		#c 
+		{
+			height: 20px;
+			width: 200px;
+			font-size: 12px;
+			border: 2px solid black;
+			margin-left:30px;
+		}
+		#select
+		{
+			height: 20px;
+			width: 200px;
+			font-size: 12px;
+			border: 2px solid black;
+			margin-top: -25px;
+			margin-left: 240px;
+		}
+		#PAY_FEES
+		{
+			height: 20px;
+			width: 200px;
+			font-size: 12px;
+			border: 2px solid black;
+			margin-left:30px;
+		}
+		#fees_blank
+		{
+			height: 20px;
+			width: 200px;
+			font-size: 12px;
+			border: 2px solid black;
+			margin-top: -25px;
+			margin-left: 240px;
+			background:white;
+		}
+		#gst
+		{
+			height: 20px;
+			width: 200px;
+			font-size: 12px;
+			border: 2px solid black;
+			margin-left:30px;
+		}
+		#GST_blank
+		{
+			height: 20px;
+			width: 200px;
+			font-size: 12px;
+			border: 2px solid black;
+			margin-top: -25px;
+			margin-left: 240px;
+			background:white;
+		}
+		#CGST
+		{
+			height: 20px;
+			width: 200px;
+			font-size: 15px;
+			border: 2px solid black;
+			margin-left:30px
+		}
+		#cgst_blank
+		{
+			height: 20px;
+			width: 200px;
+			font-size: 12px;
+			border: 2px solid black;
+			margin-top: -25px;
+			margin-left: 240px;
+			background:white;
+		}
+		#SGST
+		{
+			height: 20px;
+			width: 200px;
+			font-size: 15px;
+			border: 2px solid black;
+			margin-left:30px
+		}
+		#sgst_blank
+		{
+			height: 20px;
+			width: 200px;
+			font-size: 12px;
+			border: 2px solid black;
+			margin-top: -25px;
+			margin-left: 240px;
+			background:white;
+		}
+		#TOTAL_FEES
+		{
+			height: 20px;
+			width: 200px;
+			font-size: 15px;
+			border: 2px solid black;
+			margin-left:30px
+		}
+		#total_blank
+		{
+			height: 20px;
+			width: 200px;
+			font-size: 12px;
+			border: 2px solid black;
+			margin-top: -25px;
+			margin-left: 240px;
+			background:white;
+		}
+		#pr 
+		{
+			margin-top: 50px;
+		}
+		#cg_bl,#cgst_bl,#sgst_bl,#tot,#name,#fess
+		{
+			height: 20px;
+			width: 193px;
+		}
+	</style>
+</head>
+<body>
+	<div id="BOX">
+		<h1>ABC INSTITUTE</h1>
+		<p>VIJAY,NAGAR,INDORE(MP).PH.774805950</p>
+		<div id="RECEPIT">RECEPIT</div>
+		DATE:-<input type="date" name="" id="date">
+		<hr><br>
+		NAME OF STUDENT:-<input type="text" name="" id="name">
+        <div id="cobi">COURSE OFFERED BT INSTITUDE</div>
+	    <div id="cf">COURSE FEES</div>
+	    <div id="c">COURSE </div>
+	    <div id="select"><select>
+	    	<option value="">COURSE</option>
+	    	<option value="BBA">BBA</option>
+	    	<option value="BCA">BCA</option>
+	    	<option value="MBA">MBA</option>
+	    	<option value="BSC">BSC</option>
+	    </select></div>
+	     <div id="PAY_FEES">PAY FEES</div>
+	      <div id="fees_blank"><input type="text" name="" id="fess"></div>
+	    <div id="gst"><select id="gst_per">
+	    	<option value="">GST</option>
+	    	<option value="5%">5%</option>
+	    	<option value="12%">12%</option>
+	    	<option value="18%">18%</option>
+	    	<option value="28%">28%</option>
+	    </select>	
+	    </div>
+	    <div id="GST_blank"> <input type="text" name="" id="cg_bl" readonly></div>
+	    <div id="CGST">CGST</div>
+	    <div id="cgst_blank"><input type="text" name="" id="cgst_bl"readonly></div>
+	    <div id="SGST">SGST</div>
+	    <div id="sgst_blank"><input type="text" name="" id="sgst_bl"readonly></div>
+	    <div id="TOTAL_FEES">TOTAL FEES</div>
+	    <div id="total_blank"><input type="text" name="" id="tot"readonly></div>
+
+	    <button id="pr" onclick="print1()">PRINT RECEIPT</button>
+	    
+	</div>
+
+	<script>
+		$(document).ready(function()
+			{
+				$("#gst_per").change(function()
+					{
+						var GST=$("#gst_per").val();
+						var FEES=$("#fess").val();
+						// alert(FEES)
+						// alert(GST);
+						if (GST=="") 
+						{
+							$('#cg_bl').val("");
+							$("#cgst_bl").val("")
+						    $("#sgst_bl").val("")
+						    $("#tot").val("");
+						}
+						if (GST=="12%") 
+						{
+							var EIGHT=FEES*0.12;
+							$('#cg_bl').val(EIGHT);
+							var c=$("#cg_bl").val();
+							var T=c/2;
+							$("#cgst_bl").val(T)
+						    $("#sgst_bl").val(T)
+						    var CGST=$("#cgst_bl").val();
+						    var SGST=$("#sgst_bl").val();
+						    $('#cg_bl').val();
+						    var FEES=$("#fess").val();
+						    var GETTOTAL=parseInt(CGST)+parseInt(SGST)+parseInt(FEES)
+						    $("#tot").val(GETTOTAL);
+						}
+						if (GST=="5%") 
+						{
+							var EIGHT=FEES*0.05;
+							$('#cg_bl').val(EIGHT);
+							var c=$("#cg_bl").val();
+							var T=c/2;
+							$("#cgst_bl").val(T)
+						    $("#sgst_bl").val(T)
+						    var CGST=$("#cgst_bl").val();
+						var SGST=$("#sgst_bl").val();
+						var FEES=$("#fess").val();
+						     var GETTOTAL=parseInt(CGST)+parseInt(SGST)+parseInt(FEES)
+						    $("#tot").val(GETTOTAL);
+						}
+						if (GST=="28%") 
+						{
+							var EIGHT=FEES*0.28;
+							var EIGH=EIGHT.toFixed(2);
+							$('#cg_bl').val(EIGH);
+							var c=$("#cg_bl").val();
+							var T=c/2;
+							var to=T.toFixed(2)
+							$("#cgst_bl").val(to)
+						    $("#sgst_bl").val(to)
+						    var CGST=$("#cgst_bl").val();
+						    var SGST=$("#sgst_bl").val();
+						    var FEES=$("#fess").val();
+						     var GETTOTAL=parseInt(CGST)+parseInt(SGST)+parseInt(FEES)
+						    $("#tot").val(GETTOTAL);
+						}
+						if (GST=="18%") 
+						{
+							var EIGHT=FEES*0.18;
+							$('#cg_bl').val(EIGHT);
+							var c=$("#cg_bl").val();
+							var T=c/2;
+							$("#cgst_bl").val(T)
+						    $("#sgst_bl").val(T)
+						    var CGST=$("#cgst_bl").val();
+						var SGST=$("#sgst_bl").val();
+						var FEES=$("#fess").val();
+						     var GETTOTAL=parseInt(CGST)+parseInt(SGST)+parseInt(FEES)
+						    $("#tot").val(GETTOTAL);
+						}
+					});
+			});
+	</script>
+	<script>
+		function print1()
+		{
+			window.print();
+		}
+	</script>
+
+</body>
+</html>

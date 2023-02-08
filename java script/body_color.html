@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> FORM </title>
+	<style type="text/css">
+		span
+		{
+			color: red;
+		}
+		
+	</style>
+</head>
+<script type="text/javascript">
+	function vali()
+	{
+		var NAME=document.getElementById('name').value;
+		var FATHER=document.getElementById('father').value;
+		var EMAIL =document.getElementById('email').value;
+		var DATE=document.getElementById('date').value;
+		var TIME=document.getElementById('time').value;
+		var RESULT=true;
+		if (NAME=="") 
+		{
+			document.getElementById('name_error').innerText="PLZ FILL NAME..?"
+			RESULT=false;
+		}
+		if(FATHER=="") 
+		{
+			document.getElementById('father_span').innerText="PLZ FILL FATHER NAME..?"
+			RESULT=false;
+		}
+		if (EMAIL=="") 
+		{
+			document.getElementById('email_error').innerText="PLZ FILL EMAIL ..?"
+			RESULT=false;
+		}
+		if (EMAIL=="") 
+		{
+			document.getElementById('date_error').innerText="PLZ FILL DATE..?"
+			RESULT=false;
+		}
+		if(TIME=="") 
+		{
+			document.getElementById('TIME_error').innerText="PLZ FILL TIME..?"
+			RESULT=false;
+		}
+		var GENDER=document.getElementsByName('box');
+		var LENGTH_GENDER=document.getElementsByName('box').length;
+		var GENDER_RESULT=false;
+		var uncheck=0;
+	    for(var i=0;i<LENGTH_GENDER;i++)
+	    {
+	    	if (GENDER[i].checked==true) 
+	    	{
+	    		GENDER_RESULT=true;
+	    	}
+	    	else
+	    	{
+	    		uncheck++;
+	    	}
+	    }
+	    if (uncheck==LENGTH_GENDER)
+	     {
+	     	document.getElementById('gender_error').innerText="PLZ FILL GENDER..?"
+	     }
+		return RESULT;
+	}
+	
+</script>
+<body>
+<form action="C:\Users\hp\Desktop\full stack\java script\sirclaci.html" onsubmit="return vali()">
+	<b>NAME<span>*</span>:-</b><input type="text" name="" id="name">
+	   <span id="name_error"></span><br><br>
+	<b>FATHER NAME <span>*</span>:-</b><input type="text" name="" id="father">
+	   <span id="father_span"></span><br><br>
+	<b>EMAIL<span>*</span>:-</b> <input type="email" name="" id="email">
+	   <span id="email_error"></span><br><br>
+	<b>DOB<span>*</span>:-</b><input type="date" name="" id="date">
+	   <span id="date_error"></span><br><br>
+	<b>TOD<span>*</span>:-</b><input type="TIME" name="" id="time">
+	   <span id="TIME_error"></span><br><br>
+	<b>GENDER<span>*</span>:-</b><input type="radio" name="box" id="male">MALE
+							     <input type="radio" name="box" id="female">FEMALE
+							     <span id="gender_error"></span><br><br>
+				<button>SUBMIT</button>
+</form>
+
+</body>
+</html>

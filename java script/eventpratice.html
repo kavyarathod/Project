@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> EVENT PRATICE </title>
+	<script type="text/javascript">
+		function click_butt()
+		{
+           alert("HOW ARE YOU BUDDY");
+		}
+		function PLAY_VID()
+		{
+          var para=document.getElementById('VID');
+          para.play();
+		}
+		function sto_vid()
+		{
+			var para=document.getElementById("VID");
+			para.pause()
+		}
+		function img_zoom()
+		{
+			var kav=document.getElementById("img_prg");
+			kav.style.height="500px";
+			kav.style.width="500px";
+		}
+		function img_org()
+		{
+			var kavy=document.getElementById("img_prg");
+			kavy.style.height="200px";
+			kavy.style.width="200px";
+		}
+		function p_hide()
+		{
+           var p=document.getElementById("pra");
+           p.style.display="none";
+		}
+		function show_p()
+		{
+			document.getElementById("pra").style.display="block";
+
+		}
+		function add_2()
+		{
+			var fs=parseInt(document.getElementById("fs_num").value);
+			var ss=parseInt(document.getElementById("ss_num").value);
+			var add=fs+ss;
+			document.getElementById("res").value=add;
+        }
+        function ON_BULD()
+        {
+        	var img=document.getElementById("img_buld");
+        	img.src="C:/Users/hp/Desktop/image/buldON_image.jpeg";
+        }
+        function Of_BULD()
+        {
+        	var img=document.getElementById("img_buld")
+        	img.src="C:/Users/hp/Desktop/image/buldoff_image.jpeg";
+        }
+
+
+
+	</script>
+</head>
+<body>
+
+ <p onclick="click_butt()"><button> CLICK ME </button></p>
+ <hr>
+
+ <video id="VID" height="300px"width="200px">
+ 	<source src="C:\Users\hp\Desktop\kavya.mp4" type="">
+ </video><br>
+ <button onclick="PLAY_VID()">PLAY</button>
+ <button onclick="sto_vid()">STOP</button>
+ <hr>
+
+ <img src="C:\Users\hp\Desktop\progremers photo.jpeg" onmouseover="img_zoom()" height="200px" width="200px" id="img_prg" onmouseout="img_org()">                                
+
+ <hr>
+
+ <p id="pra">Direct Expenses :- It refers to the expenses that are specifically incurred by the enterprises to produce a product. The production cannot take place without incurring these expenses. It varies directly with the level of production.Direct Expenses :- It refers to the expenses that are specifically incurred by the enterprises to produce a product. The production cannot take place without incurring these expenses. It varies directly with the level of production.Direct Expenses :- It refers to the expenses that are specifically incurred by the enterprises to produce a product. The production cannot take place without incurring these expenses. It varies directly with the level of production.</p>
+
+<button onclick="p_hide()"> HIDE</button>
+<button onclick="show_p()"> SHOW</button>
+
+<hr>
+
+ first number :- <input type="text" name="" id="fs_num"><br><br>
+ secound number :- <input type="text" name="" id="ss_num"><br><br>
+ <input type="submit" name="" value="+" onclick="add_2()"><br><br>
+ RESULT:-<input type="text" name="" id="res" readonly>
+
+ <hr>
+ <button onclick="ON_BULD()">ONN</button>
+ <img src="C:\Users\hp\Desktop\image\buldoff_image.jpeg" id="img_buld">
+ <button onclick="Of_BULD()">OFF</button>
+
+ <hr>
+ <script>
+ 	
+ 	function add_1()
+ 	{
+ 		var fns=parseInt(document.getElementById("fv").value);
+ 		var sns=parseInt(document.getElementById("sv").value);
+ 		var add=fns+sns;
+ 		document.getElementById("RESULT_05").value=add;
+ 	}
+ 	function sup()
+ 	{
+ 		var fn=parseInt(document.getElementById("fv").value);
+ 		var sn=parseInt(document.getElementById("sv").value);
+ 		var add=fn-sn;
+ 		document.getElementById("RESULT_05").value=add;
+ 	}
+ 	function dic()
+ 	{
+ 		var fn=parseInt(document.getElementById("fv").value);
+ 		var sn=parseInt(document.getElementById("sv").value);
+ 		var div=fn*sn;
+ 		document.getElementById("RESULT_05").value=div;
+ 	}
+ 	function mup()
+ 	{
+ 		var fn=parseInt(document.getElementById("fv").value);
+ 		var sn=parseInt(document.getElementById("sv").value);
+ 		var mup=fn/sn;
+ 		document.getElementById("RESULT_05").value=mup;
+ 	}
+ 	function tol()
+ 	{
+ 		var fn=parseInt(document.getElementById("fv").value);
+ 		var sn=parseInt(document.getElementById("sv").value);
+ 		var tol=fn+sn;
+ 		document.getElementById("RESULT_05").value=tol;
+ 	}
+ 	function KAVY_001()
+ 	{
+ 		document.getElementById("TIME").innerHTML=Date();
+ 	}
+ 	function hide_001()
+ 	{
+ 		document.getElementById("TIME").display= "none";
+ 	} 
+
+
+
+ </script>
+
+  FIRST NUMBER:-   <input type="text" name="" id="fv"><br><br>
+  SECOND  NUMBER:- <input type="text" name="" id="sv" ><br><br>
+  <button onclick="add_1()">+</button>
+  <button onclick="sup()">-</button>
+  <button onclick="dic()">*</button>
+  <button onclick="mup()">/</button>
+  <button onclick="tol()">=</button>
+  <br><br>
+  TOTAL VALUE :- <input type="text" id="RESULT_05">
+
+  <hr>
+  <button onclick="KAVY_001()">CLICK SHOW TIME</button>
+  <p id="TIME"></p>
+  <button onclick="hide_001()"> CLICK HIDE TIME </button>
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+</body>
+</html>

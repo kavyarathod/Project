@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> hide and show</title>
+	<script type="text/javascript">
+
+					function hello_kavy() 
+					{
+						alert(" hello kavy");
+					}
+
+                    function hello_1()
+					{
+						var para =document.getElementById('hello');
+						para.style.color="red";
+					    para.style.backgroundColor="black";
+					    para.style.width="200px"
+
+					}
+					function hello_change()
+					{
+					 	var para=document.getElementById('hello');
+					 	para.style.color="black";
+					 	para.style.backgroundColor="white";
+					}
+					function img_fac()
+					{
+						var img=document.getElementById("fac_img");
+						img.style.color="blue";
+						img.style.height="300px";
+						img.style.weight="300px";
+					}
+					function imc_cal()
+					{
+						var img=document.getElementById('fac_img');
+						img.style.height="100px";
+						img.style.height="100px";
+					}
+
+					function ON_BULD()
+					{
+						var light=document.getElementById("bul_img")
+						light.src="C:/Users/hp/Desktop/image/buldON_image.jpeg"
+					}
+					function OFF_BULD()
+					{
+						var light=document.getElementById("bul_img")
+						light.src="C:/Users/hp/Desktop/image/buldoff_image.jpeg"
+					}
+
+					// /*VIDEO*/
+					function PLAY_VIDEO()
+					{
+						var vid=document.getElementById("song_video")
+						vid.play();
+                    }
+                    function MUT_BUTTON() 
+                    {
+                    	var vid=document.getElementById("song_video")
+                    	vid.pause();
+                    }
+
+                    // video
+
+                    function play_son()
+                    {
+                    	var son=document.getElementById("audio_song");
+                    	son.play();
+                    }
+                    function muted_son()
+                    {
+                    	var son=document.getElementById("audio_song");
+                    	son.pause();
+                    }
+
+                    // hide and show.
+
+                    function hide_button()
+                    {
+                    	var but=document.getElementById("hello_kavya");
+                    	but.style.display="none";
+                    }
+                    function show_button()
+                    {
+                    	var but=document.getElementById("hello_kavya");
+                    	but.style.display="block";
+                    }
+
+                    // hide and show in buttton.
+
+                    function hide_button()
+                    {
+                    	var para=document.getElementById("on_button");
+                    	para.style
+                    }
+		
+	</script>
+	
+</head>
+<body>
+	<p id="KAV_BUT" onclick="hello_kavy()"> <button>KAVY</button></p>
+
+	<hr>
+
+	<p id="hello" onmouseover="hello_1()" onmouseout="hello_change()"> hello </p>
+	<p>kavya </p>
+
+
+	<hr>
+
+	<img id="fac_img" onmouseover="img_fac()"onmouseout="imc_cal()" src="C:\Users\hp\Desktop\face.png">
+
+	<hr>
+
+	<button onclick="ON_BULD()">ON</button>
+	<img id="bul_img" src="C:\Users\hp\Desktop\image\buldoff_image.jpeg">
+	<button onclick="OFF_BULD()">OFF</button>
+
+	<hr>
+
+	<video id="song_video" width="300px"height="300px">
+		<source src="C:\Users\hp\Desktop\kavya.mp4" type="">
+	</video><br><br>
+	<button onclick="PLAY_VIDEO()"> PLAY </button>
+	<button onclick="MUT_BUTTON()"> MUTED </button>
+
+	<hr>
+
+	<audio id="audio_song">
+		<source src="C:\Users\hp\Desktop\kavya aduio.mpeg" type="">
+	</audio>
+	<button onclick="play_son()"> play </button>
+	<button onclick="muted_son()"> muted </button>
+
+	<hr>
+
+	<p id="hello_kavya"> hello Kavya Rathod</p>
+	<button onclick="hide_button()"> hide </button>
+	<button onclick="show_button()"> show</button>
+
+	<hr>
+
+	<p id="on_button"> how are you </p>
+	<button id="hide" onclick="hide_button()">HIDE</button>
+	<button id="show" onclick="show_button()">SHOW</button>
+
+
+
+</body>
+</html>

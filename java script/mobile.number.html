@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> mobile number </title>
+	<style type="text/css">
+		#box
+		{
+			height: 500px;
+			width: 500px;
+			border: 5px inset black;
+			margin-left: 300px;
+			margin-top: 30px;
+
+		}
+		#but
+		{
+			margin-left: 200px;
+		}
+		span
+		{
+			color: red;
+		}
+	</style>
+</head>
+<body style="background: hotpink;">
+	        <script type="text/javascript">
+	        	function validation()
+	        	{
+	        		var NMAE=document.getElementById('uname').value;
+	        		var FATHER=document.getElementById('fa_name').value;
+	        		var EMAIL=document.getElementById('email').value;
+	        		var ADD=document.getElementById('add').value;
+	        		var DATE=document.getElementById('date').value;
+	        		var TIME=document.getElementById('time').value;
+	        		var SELECT=document.getElementById('select').value;
+	        		var IMAGE=document.getElementById('image').value;
+	        		// var GENDER=document.getElementByName('gender').value;
+	        		// var COUNTLENGTH=document.getElementByName('gender').value.length;
+	        		// var uncheck=0;
+
+	        		var result=true;
+	        		if (NMAE=="") 
+	        		{
+	        			document.getElementById('uname_error').innerText="plz fill name...?"
+	        			result =false;
+	        		}
+	        		if (FATHER=="") 
+	        		{
+	        			document.getElementById('f_name').innerText="plz fill father name...?"
+	        			result = false;
+	        		}
+	        		if (EMAIL=="") 
+	        		{
+	        			document.getElementById('email_error').innerText='plz fill email...?'
+	        			result=false;
+	        		}
+	        		if (ADD=="") 
+	        		{
+	        			document.getElementById('add_error').innerText="plz fill address..?"
+	        			result=false; 
+	        		}
+	        		if (DATE=="") 
+	        		{
+	        			document.getElementById('date_error').innerText="plz select date..?"
+	        			result=false;
+	        		}
+	        		if (TIME=="") 
+	        		{
+	        			document.getElementById('time_error').innerText="plz select time...?"
+	        			result=false;
+	        		}
+	        		if (SELECT=="") 
+	        		{
+	        			document.getElementById('select_error').innerText="plz select city..?"
+	        			result=false;
+	        		}
+	        		if (IMAGE=="") 
+	        		{
+	        			document.getElementById('image_error').innerText="plz select image..?"
+	        			result=false;
+	        		}
+	        		return result;
+
+	        	}
+	        	
+	
+        
+
+
+
+        </script>
+        <div id="box">
+        <form action="C:\Users\hp\Desktop\full stack\java script\sirclaci.html" onsubmit="return validation()">
+                <b>NAME<span>*</span>:- </b><input type="text" name="" id="uname" placeholder="ENTER NAME"> <span id="uname_error"></span><br><br>
+
+        	<b>FATHER NAME<span>*</span> :-</b><input type="text" name="" id="fa_name"><span id="f_name"></span><br><br>
+
+        	<b>EMAIL<span>*</span>:-</b><input type="email" name="" id="email"><span id="email_error"></span><br><br>
+
+        	<b>ADDRESS <span>*</span>:-</b><input type="textarea" name="" id="add"><span id="add_error"></span><br><br>
+
+        	<b>DOB<span>*</span>:-</b><input type="date" name="" id="date"><span id="date_error"></span><br><br>
+
+        	<b>TOB<span>*</span>:-</b><input type="time" name="" id="time"><span id="time_error"></span><br><br>
+
+        	<b>SELECT CITIY<span>*</span>:-</b>
+        					     <select id="select">
+        								<option value="">SELECT VALUE</option>
+        								<option value="INDORE"> INDORE</option>
+        								<option value="PUNE">PUNE</option>
+        								<option value="MUMBAI">MUMBAI</option>
+        								<option value="BHOPAL">BHOPAL</option>
+        		
+        					     </select><span id="select_error"></span><br><br>
+        	<b>IMAGE</b><span>*</span>:-<input type="file" name="image/*" id="image"><span id="image_error"></span><br><br>
+
+        	<!-- <b> GENDER<span>*</span> :-</b>:-<input type="radio" name="gender" id="male">MALE
+        					 <input type="radio" name="gender" id="femail">FEMAIL
+        					 <span id="gender_error"></span><br><br> -->
+
+        	<!-- <b> MOBILE </b><span>*</span>:-<input type="text" name="" id="pass"><span id="pass_error"></span><br><br> -->
+
+        	
+	      
+
+
+
+        	<button id="but"><b>SUBMIT</b></button>
+
+
+
+	</form>
+</div>
+	
+	 
+    
+
+</body>
+</html>
+
+
+

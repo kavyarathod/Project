@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> EVENT PRATICE </title>
+  <style>
+    #box
+    {
+      background: pink;
+      left: 200px;
+      margin-top: 200px;
+      height: 240px;
+    }
+    #error
+    {
+      margin-left: 200px;
+      font-size: 20px;
+      margin-top: 0px;
+    }
+    button
+    {
+      margin-left: 200px;
+      font-size: 20px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body id="cl">
+
+  <div id="box"><br><br>
+    
+    OLD PASSWORD:-<input type="password" name="" id="old_pass" onkeyup="old_pass()"><br><br>
+    NEW PASSWORD:-<input type="password" name="" id="new_pass"><br><br>
+    CONFIRM PASSWORD:-<input type="password" name="" id="con_pass"><br><br>
+    <button onclick="pass_check()">SUBMIT</button>
+    <p id="error"></p>
+   
+  </div>
+
+   <script>
+      function pass_check()
+      {
+         var OLD_PASSWORD=1234;
+         var old_pass=document.getElementById('old_pass').value;
+         var new_pass=document.getElementById("new_pass").value;
+         var con_pass=document.getElementById("con_pass").value;
+         var error=document.getElementById("error");
+         if (OLD_PASSWORD==old_pass) 
+         {
+            if(new_pass==con_pass) 
+            {
+              error.innerText="SUCESFULLY CHANGE.."
+            }
+            else
+            {
+              error.innerText="NEW AND CONFIRM PASSWORD ARE NOT MATCH."
+            }
+         }
+         else
+         {
+            error.innerText="PLZ FILL OLD PASSWORD CORRECT"
+         }
+      }
+       function old_pass()
+       {
+         var old_pass=document.getElementById("old_pass").value;
+         var new_pass=document.getElementById("new_pass").value;
+         var con_pass=document.getElementById("con_pass").value;
+
+         if (old_pass!=="") 
+         {
+           document.getElementById("error").innerText=""
+         }
+         if(new_pass==con_pass) 
+         {
+          document.getElementById("error").innerText=''
+         }
+       }
+   </script>
+
+
+</body>
+</html>

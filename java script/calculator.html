@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Calculator </title>
+</head>
+     <script type="text/javascript">
+     	function calci()
+     	{
+     		var value=document.getElementById("head").value
+     		var show_result = eval(value);
+     		document.getElementById("head").value=show_result;
+     	}
+     	
+	
+     </script>
+
+<body>
+
+	<input type="text" name="" value="" id="head" readonly>
+	<br><br><br>
+	<input type="button" name="" value="7" onclick="document.getElementById('head').value+='7' ">
+	<input type="button" name="" value="8" onclick="document.getElementById('head').value+='8'">
+	<input type="button" name="" value="9" onclick="document.getElementById('head').value+='9'">
+	<input type="button" name="" value="/" onclick="document.getElementById('head').value+='/'"><br><br>
+	<input type="button" name="" value="4" onclick="document.getElementById('head').value+='4'">
+	<input type="button" name="" value="5" onclick="document.getElementById('head').value+='5'">
+	<input type="button" name="" value="6" onclick="document.getElementById('head').value+='6'">
+	<input type="button" name="" value="*" onclick="document.getElementById('head').value+='*'"><br><br>
+	<input type="button" name="" value="1" onclick="document.getElementById('head').value+='1'">
+	<input type="button" name="" value="2" onclick="document.getElementById('head').value+='2'">
+	<input type="button" name="" value="3" onclick="document.getElementById('head').value+='3'">
+	<input type="button" name="" value="-" onclick="document.getElementById('head').value+='-'"><br><br>
+	<input type="button" name="" value="c" onclick="document.getElementById('head').value =''">
+	<input type="button" name="" value="=" onclick="calci()">
+	<input type="button" name="" value="." onclick="document.getElementById('head').value+='.'">
+	<input type="button" name="" value="+" onclick="document.getElementById('head').value+='+'"><br><br>
+
+</body>
+</html>

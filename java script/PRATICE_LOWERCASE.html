@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script type="text/javascript"> 
+		function name1()
+		{
+			var NAME =document.getElementById('name').value;
+			if(NAME=="")
+			{
+				document.getElementById('error').innerText="plz fill name..?"
+			}
+			if(NAME!="")
+			 {
+			 	document.getElementById('error').type=""
+			 }
+		}
+
+     
+
+
+
+	</script>
+</head>
+<body>  <form onsubmit="return name1()"> 
+	NAME:-<input type="text" name="" id="name" onkeyup="name1()">
+	<span id="error"></span>
+	LOWER CASE:-<input type="text" name="" id="lower">
+	UPPER CASE:-<input type="text" name="" id="uper">
+	<button>submit</button>
+	</form>
+
+
+</body>
+</html>
